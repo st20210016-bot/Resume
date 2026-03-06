@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diamond Dev | Creative Developer & 3D Web Builder</title>
+    <meta name="description"
+        content="Elite creative developer portfolio — 3D web experiences, automation systems, Discord bots, and cutting-edge digital products." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="components.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- LOADING SCREEN -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <h1 class="loader-title">DIAMOND DEV</h1>
+            <p class="loader-sub">Loading Experience</p>
+            <div class="loader-bar">
+                <div class="loader-bar-fill" id="loaderFill"></div>
+            </div>
+            <p class="loader-percent" id="loaderPercent">0%</p>
+        </div>
+    </div>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <div class="spotlight" id="spotlight"></div>
+
+    <!-- GRADIENT MESH BG -->
+    <div class="gradient-mesh"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo" data-hover>DIAMOND<span>DEV</span></a>
+            <div class="nav-links">
+                <a href="#about" data-hover>About</a>
+                <a href="#skills" data-hover>Skills</a>
+                <a href="#projects" data-hover>Projects</a>
+                <a href="#lab" data-hover>Lab</a>
+                <a href="#resume" data-hover>Resume</a>
+                <a href="#contact" class="nav-cta" data-hover>Let's Talk</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" data-hover>
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#lab" class="mobile-link">Lab</a>
+        <a href="#resume" class="mobile-link">Resume</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <main>
+
+        <!-- ════════ HERO ════════ -->
+        <section id="hero" class="hero">
+            <canvas id="heroCanvas"></canvas>
+            <div class="hero-content">
+                <div class="hero-badge reveal" data-delay="0.3">
+                    <span class="badge-dot"></span>
+                    <span>Available for Projects</span>
+                </div>
+                <h1 class="hero-name" id="heroName">
+                    <span class="char-wrap"></span>
+                </h1>
+                <p class="hero-subtitle reveal" data-delay="1.2">Creative Developer &bull; 3D Web Builder &bull;
+                    Automation Innovator</p>
+                <div class="hero-ctas reveal" data-delay="1.5">
+                    <a href="#projects" class="btn btn-primary" data-hover>View Projects <svg width="14" height="14"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17l9.2-9.2M17 17V7H7" />
+                        </svg></a>
+                    <a href="#resume" class="btn btn-glass" data-hover>Explore Resume</a>
+                    <a href="#contact" class="btn btn-glass" data-hover>Contact Me</a>
+                </div>
+                <div class="hero-stats reveal" data-delay="1.8">
+                    <div class="stat"><span class="stat-val">50+</span><span class="stat-label">Projects</span></div>
+                    <div class="stat"><span class="stat-val">3+</span><span class="stat-label">Years</span></div>
+                    <div class="stat"><span class="stat-val">100%</span><span class="stat-label">Passion</span></div>
+                </div>
+            </div>
+            <div class="scroll-indicator reveal" data-delay="2.2">
+                <span>Scroll</span>
+                <div class="scroll-mouse">
+                    <div class="scroll-dot"></div>
+                </div>
+            </div>
+            <div class="hero-fade"></div>
+        </section>
+
+        <!-- ════════ ABOUT ════════ -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-num">01</span><span class="section-label">Who I Am</span>
+                    <div class="section-line"></div>
+                </div>
+                <h2 class="section-title reveal"><span class="gradient-text">Creative</span> Technologist</h2>
+
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p class="text-lg reveal">I don't just write code — I architect <strong>digital
+                                experiences</strong> that push boundaries. From cinematic 3D portfolios to intelligent
+                            automation systems, every project I touch is built with obsessive attention to detail.</p>
+                        <p class="reveal" data-delay="0.1">My work lives at the intersection of engineering and art. I
+                            build bots that run communities, interfaces that tell stories, and systems that make complex
+                            workflows feel effortless.</p>
+                        <p class="reveal" data-delay="0.2">I believe technology should feel alive — responsive, elegant,
+                            and deeply human. That's the standard I hold myself to.</p>
+                        <div class="quote reveal" data-delay="0.3">
+                            <div class="quote-line"></div><em>"Code is a medium. Design is the message."</em>
+                        </div>
+                    </div>
+                    <div class="about-cards">
+                        <div class="glass-card reveal" data-delay="0" data-glow="#00d4ff">
+                            <div class="card-icon"><i data-lucide="monitor"></i></div>
+                            <h3>Modern Web Experiences</h3>
+                            <p>Building immersive, performant web applications with cutting-edge frameworks and 3D
+                                technologies.</p>
+                        </div>
+                        <div class="glass-card reveal" data-delay="0.1" data-glow="#7b2fff">
+                            <div class="card-icon"><i data-lucide="bot"></i></div>
+                            <h3>Automation & AI Systems</h3>
+                            <p>Crafting intelligent automation workflows, bots, and custom tools that streamline complex
+                                processes.</p>
+                        </div>
+                        <div class="glass-card reveal" data-delay="0.2" data-glow="#ff2d95">
+                            <div class="card-icon"><i data-lucide="layers"></i></div>
+                            <h3>Creative Development</h3>
+                            <p>Merging code with visual storytelling — from interactive interfaces to motion-driven
+                                products.</p>
+                        </div>
+                        <div class="glass-card reveal" data-delay="0.3" data-glow="#0ff4f4">
+                            <div class="card-icon"><i data-lucide="wrench"></i></div>
+                            <h3>Custom Solutions</h3>
+                            <p>Engineering tailored digital products, from Discord ecosystems to full-stack platforms,
+                                built to spec.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════ SKILLS ════════ -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-head reveal"><span class="section-num">02</span><span
+                        class="section-label">Expertise</span>
+                    <div class="section-line"></div>
+                </div>
+                <h2 class="section-title reveal"><span class="gradient-text">Technical</span> Arsenal</h2>
+
+                <div class="skill-tabs reveal" data-delay="0.1" id="skillTabs"></div>
+                <div class="skill-grid" id="skillGrid"></div>
+
+                <div class="marquee-wrap reveal" data-delay="0.2">
+                    <div class="marquee-fade-l"></div>
+                    <div class="marquee-fade-r"></div>
+                    <div class="marquee" id="marquee"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════ PROJECTS ════════ -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-head reveal"><span class="section-num">03</span><span
+                        class="section-label">Work</span>
+                    <div class="section-line"></div>
+                </div>
+                <h2 class="section-title reveal"><span class="gradient-text">Featured</span> Projects</h2>
+                <div class="project-grid" id="projectGrid"></div>
+            </div>
+        </section>
+
+        <!-- PROJECT MODAL -->
+        <div class="modal-overlay" id="modalOverlay">
+            <div class="modal-content glass-strong" id="modalContent"></div>
+        </div>
+
+        <!-- ════════ CREATIVE LAB ════════ -->
+        <section id="lab" class="section">
+            <div class="container">
+                <div class="section-head reveal"><span class="section-num">04</span><span
+                        class="section-label">Experiments</span>
+                    <div class="section-line"></div>
+                </div>
+                <h2 class="section-title reveal"><span class="gradient-text">Creative</span> Lab</h2>
+                <p class="text-muted max-w-2xl reveal" data-delay="0.1">A curated archive of visual experiments, concept
+                    prototypes, and motion studies pushing the boundary of what's possible on the web.</p>
+                <div class="lab-grid" id="labGrid"></div>
+            </div>
+        </section>
+
+        <!-- ════════ RESUME ════════ -->
+        <section id="resume" class="section">
+            <div class="container container-narrow">
+                <div class="section-head reveal"><span class="section-num">05</span><span
+                        class="section-label">Background</span>
+                    <div class="section-line"></div>
+                </div>
+                <h2 class="section-title reveal"><span class="gradient-text">Interactive</span> Resume</h2>
+                <div class="resume-tabs reveal" data-delay="0.1" id="resumeTabs"></div>
+                <div class="resume-content" id="resumeContent"></div>
+            </div>
+        </section>
+
+        <!-- ════════ PHILOSOPHY ════════ -->
+        <section id="philosophy" class="section">
+            <div class="container container-narrow text-center">
+                <div class="philosophy-glow"></div>
+                <span class="section-num reveal">06 — Philosophy</span>
+                <h2 class="philosophy-title reveal" data-delay="0.1">
+                    I believe in building things that feel <span class="gradient-text">alive</span> — interfaces that
+                    breathe, systems that think, and experiences that <span class="gradient-text">stay with you</span>.
+                </h2>
+                <p class="text-lg text-secondary reveal" data-delay="0.2">Code, for me, is a creative medium. Every
+                    project is a chance to blend logic with beauty, engineering with empathy, and power with elegance. I
+                    don't build minimum viable products — I craft digital experiences that demand attention.</p>
+                <p class="text-muted reveal" data-delay="0.3">Whether it's a Discord bot that runs a community
+                    flawlessly, an automation system that saves hours of work, or a portfolio that stops you mid-scroll
+                    — I want every piece of my work to feel intentional, modern, and unmistakably mine.</p>
+                <div class="philosophy-quote reveal" data-delay="0.4">
+                    <div class="quote-line"></div>
+                    <em>The details aren't the details. They are the design.</em>
+                    <div class="quote-line"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════ CONTACT ════════ -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="contact-glow-r"></div>
+                <div class="contact-glow-l"></div>
+                <div class="section-head reveal"><span class="section-num">07</span><span
+                        class="section-label">Connect</span>
+                    <div class="section-line"></div>
+                </div>
+                <h2 class="section-title reveal"><span class="gradient-text">Let's Build</span> Something</h2>
+                <p class="text-lg text-secondary max-w-2xl reveal" data-delay="0.1">Ready to bring your vision to life?
+                    Whether you need a custom bot, an automation system, a premium web experience, or something entirely
+                    unique — I'm here to make it happen.</p>
+
+                <div class="contact-cards">
+                    <a href="https://discord.com" target="_blank" rel="noopener" class="glass-card contact-card reveal"
+                        data-delay="0.15" data-glow="#5865F2">
+                        <div class="contact-icon" style="background:rgba(88,101,242,0.12);color:#5865F2">
+                            <i data-lucide="message-square"></i>
+                        </div>
+                        <div>
+                            <h3>Discord</h3>
+                            <p>diamond_devcs</p><span class="contact-link" style="color:#5865F2">Connect Now ↗</span>
+                        </div>
+                    </a>
+                    <a href="https://instagram.com/khalid.shahin2909" target="_blank" rel="noopener"
+                        class="glass-card contact-card reveal" data-delay="0.25" data-glow="#E4405F">
+                        <div class="contact-icon" style="background:rgba(228,64,95,0.12);color:#E4405F">
+                            <i data-lucide="instagram"></i>
+                        </div>
+                        <div>
+                            <h3>Instagram</h3>
+                            <p>khalid.shahin2909</p><span class="contact-link" style="color:#E4405F">Connect Now
+                                ↗</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="glass services-box reveal" data-delay="0.3">
+                    <h3>What I can build for you</h3>
+                    <div class="service-tags">
+                        <span data-hover>Custom Bots</span><span data-hover>Automation Systems</span><span
+                            data-hover>Web Experiences</span>
+                        <span data-hover>Creative Tech Projects</span><span data-hover>Discord Ecosystems</span><span
+                            data-hover>Dashboards & Tools</span>
+                    </div>
+                    <a href="https://discord.com" class="btn btn-primary" data-hover>Start a Conversation <svg
+                            width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>© 2025 <span class="gradient-text">DIAMOND DEV</span> — All rights reserved.</p>
+            <p class="text-xs">Built with passion, precision & vision</p>
+        </div>
+    </footer>
+
+    <!-- CDN LIBS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
