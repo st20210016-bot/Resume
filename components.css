@@ -394,15 +394,28 @@
     background: var(--bg);
 }
 
-.tag-grid {
+.toolkit-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.toolkit-box h4 {
+    color: var(--blue);
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.tag-grid {
+    display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
 }
 
 .tag-item {
-    text-align: center;
-    padding: 0.5rem;
+    padding: 0.4rem 0.8rem;
     font-size: 0.8rem;
     background: var(--glass);
     border-radius: 0.75rem;

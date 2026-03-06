@@ -261,21 +261,71 @@ function initLab() {
 }
 
 // ═══ RESUME ═══
+// ═══ RESUME ═══
+const resumeData = {
+    experience: [
+        { period: '2023 - Present', title: 'Lead Creative Developer', company: 'Independent / Freelance', desc: 'Architecting high-end 3D web experiences and complex Discord ecosystems. Specialized in blending cinematic design with performant code.' },
+        { period: '2022 - 2023', title: 'Automation Engineer', company: 'Tech Pulse Systems', desc: 'Developed proprietary workflow automation tools and API integrations that optimized operation costs by 40% for SaaS startups.' },
+        { period: '2021 - 2022', title: 'Frontend Developer', company: 'Visionary Media', desc: 'Built interactive marketing landing pages using Framer Motion and Three.js, focusing on micro-interactions.' }
+    ],
+    toolkit: [
+        { name: 'Core', skills: ['JavaScript', 'TypeScript', 'Python', 'Node.js'] },
+        { name: 'Frontend', skills: ['React', 'Next.js', 'Tailwind', 'GSAP', 'Three.js'] },
+        { name: 'Backend', skills: ['FastAPI', 'MongoDB', 'PostgreSQL', 'Redis'] }
+    ],
+    education: [
+        { period: '2019 - 2023', title: 'B.Sc. in Computer Science', company: 'American University in Dubai', desc: 'Specialized in Advanced Algorithms and UX Engineering.' }
+    ]
+};
+
 function initResume() {
     const tabs = document.getElementById('resumeTabs');
     const content = document.getElementById('resumeContent');
-    ['Experience', 'Skills'].forEach((t, i) => {
+    const categories = ['Experience', 'Toolkit', 'Education'];
+
+    categories.forEach((cat, i) => {
         const btn = document.createElement('button');
         btn.className = `resume-tab ${i === 0 ? 'active' : ''}`;
-        btn.innerText = t;
+        btn.innerText = cat;
         btn.onclick = () => {
             document.querySelectorAll('.resume-tab').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            content.innerHTML = i === 0 ? '<div class="timeline-item"><div class="timeline-card"><span class="period">2023-Pres</span><h4>Lead Dev</h4><p>Digital Solutions</p></div></div>' : '<div class="tag-grid"><div class="tag-item">React</div><div class="tag-item">Three.js</div></div>';
+            renderResumeSection(cat.toLowerCase());
         };
         tabs.appendChild(btn);
     });
-    tabs.children[0].click();
+
+    function renderResumeSection(key) {
+        content.innerHTML = '';
+        if (key === 'toolkit') {
+            const grid = document.createElement('div');
+            grid.className = 'toolkit-grid';
+            resumeData.toolkit.forEach(group => {
+                const box = document.createElement('div');
+                box.className = 'glass-card toolkit-box';
+                box.innerHTML = `<h4>${group.name}</h4><div class="tag-grid">${group.skills.map(s => `<div class="tag-item">${s}</div>`).join('')}</div>`;
+                grid.appendChild(box);
+            });
+            content.appendChild(grid);
+        } else {
+            resumeData[key].forEach(item => {
+                const entry = document.createElement('div');
+                entry.className = 'timeline-item reveal';
+                entry.innerHTML = `
+                    <div class="timeline-card glass">
+                        <span class="period">${item.period}</span>
+                        <h4>${item.title}</h4>
+                        <p class="company">${item.company}</p>
+                        <p class="desc">${item.desc}</p>
+                    </div>`;
+                content.appendChild(entry);
+            });
+        }
+        lucide.createIcons();
+        initScrollReveal(); // Re-trigger for new items
+    }
+
+    renderResumeSection('experience');
 }
 
 // ═══ SCROLL ═══
